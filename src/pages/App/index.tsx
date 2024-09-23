@@ -1,8 +1,13 @@
+import Header from '@/components/Header';
+import { SearchProvider } from '@/context';
+import Home from '../Home';
+
 function App(): JSX.Element {
   return (
-    <div>
-      <h1 className="text-3xl">Welcome to your React app!</h1>
-    </div>
+    <SearchProvider>
+      <Header />
+      <Home />
+    </SearchProvider>
   );
 }
 
