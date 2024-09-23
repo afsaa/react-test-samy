@@ -1,3 +1,4 @@
+import { sendLike } from '../../api';
 import { ProductCardProps } from './index.types';
 
 export const ProductCard: React.FC<ProductCardProps> = ({ id, type, title, author, price, main_attachment, liked, likes_count }): JSX.Element => {
@@ -25,12 +26,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ id, type, title, autho
   }
 
   const handleLike = () => {
-    fetch(`http://localhost:3100/images/${id}/likes`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    sendLike(id);
   };
 
   return (
