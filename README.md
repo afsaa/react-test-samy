@@ -1,73 +1,77 @@
-# Requerimientos
+# Front Test Samy
 
-Necesitamos desarrollar una Single Page Application (SPA) que muestre la información de nuestras imagenes:
-  1. Mostrar todas las imagenes con un scroll infinito.
-  2. Filtrar el contenido a través de una búsqueda (No es necesario que el resultado sea coherente).
-  3. Realizar un like/unlike de cada uno de los items. UI responsive.
+Este proyecto es una prueba de front-end diseñada para evaluar tus habilidades en el desarrollo de interfaces de usuario.
 
-# Información
+## Requisitos
 
-En el momento del desarrollo de la aplicación cliente, el API no se encuentra desarrollada, por
-lo que esta incluida una api mock que simula el comportamiento de la API.
+- Node.js
+- npm o yarn
 
-Para arrancar la api mock simplemente ejecutar:
+## Instalación
 
-`npm run mocks`
+1. Clona el repositorio:
 
-## Endpoints
-
-### `GET http://localhost:3100/images`
-```json
-[
-  {
-    "type": "Image",
-    "id": 2,
-    "title": "Train in India-Agra",
-    "author": "SamyRoad",
-    "created_at": "2012-12-12T21: 08: 20Z",
-    "main_attachment": {
-      "big": "http://lorempixel.com/400/500/",
-      "small": "http://lorempixel.com/100/125/"
-    },
-    "likes_count": 5,
-    "liked": true,
-    "links": [
-      {
-        "rel": "avatar",
-        "uri": "http://lorempixel.com/250/250/",
-        "methods": "GET"
-      },
-      {
-        "rel": "like",
-        "uri": "http://localhost:3100/images/2/likes",
-        "methods": "POST"
-      }
-    ]
-  },
-  ...
-]
+```sh
+git clone https://github.com/afsaa/react-test-samy.git
 ```
 
-Se puede utilizar los query params `search` y `page` para simular la busqueda y paginación.
+2. Navega al directorio del proyecto:
 
+```sh
+cd react-test-samy
+```
 
-### `POST http://localhost:3100/images/:id/likes`
+3. Instala las dependencias:
 
-Espera un body vacio y respondera con un 204 si todo ha ido correctamente, simula la acción de like.
+```sh
+npm install
+```
 
-# Diseño
+o
 
-La visualización de la aplicación cambia dependiendo del dispositivo que se este utilizando.
-- En el caso de que se utilice un dispositivo móvil, se debe de mostrar la aplicación siguiendo el diseño mobile.psd.
-- En el caso que se utilice una pantalla mayor, se debe de utilizar el diseño web.psd, con un mínimo de 2 columnas y un máximo de 4.
+```sh
+yarn install
+```
 
-Los diseños se pueden encontrar [aqui](https://www.dropbox.com/sh/r1fp5nz7x046kjt/AACQdbp6bZlv2pNtCN2lTEoEa?dl=0).
+## Uso
 
-Si no dispones de photoshop puedes usar [photopea](https://www.photopea.com/).
+Para iniciar la api mock, ejecuta:
 
-# Implementación
+```sh
+npm run mocks
+```
 
-- Diseñar e implementar la aplicación usando preferiblemente React.
-- HTML y estilos responsive a partir de los PSDs: mobile para móviles y web para Desktop.
+o
 
-Se valorarán el uso e implementación de tests.
+```sh
+yarn mocks
+```
+
+Para iniciar el servidor de desarrollo, en una nueva terminal ejecuta:
+
+```sh
+npm run dev
+```
+
+o
+
+```sh
+yarn dev
+```
+
+## Estructura del Proyecto
+
+- `public/`: Contiene los archivos estáticos.
+- `src/`: Contiene el código fuente del proyecto.
+- `src/components`: Contiene los componentes usados en el proyecto.
+- `src/pages`: Contiene las páginas desde las que se invocan los componentes.
+- `src/context`: Contiene los contextos que pueden usar los componentes o páginas.
+- `src/api`: Contiene las funciones API para obtener productos y enviar likes.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request para discutir cualquier cambio.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
