@@ -17,17 +17,16 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <header className="w-full md:px-10 md:py-10 px-5 py-5 flex md:justify-between justify-around items-center">
+    <header className="w-full p-4 md:p-10 flex justify-between items-center">
       <div>
-        <img src="./samy-ecommerce.png" alt="Company logo" className="w-20 h-auto md:w-40 lg:w-52" />
+        <img src="./samy-ecommerce.png" alt="Company logo" className="w-48 h-auto md:w-52 lg:w-64 xl:w-64 object-cover" />
       </div>
-      <label className="w-2/3 md:w-2/4 relative block">
-        <span className="sr-only">Search</span>
+      <label className="w-full ml-2 md:w-2/4 h-auto relative block">
         <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-          <IconSearch className="md:h-7 md:w-7 h-5 w-5 text-black" />
+          <IconSearch className="w-4 md:w-6 h-4 md:h-6 text-black" />
         </span>
         <input
-          className="placeholder:text-gray-400 placeholder:font-semibold block text-black bg-gray-200 w-full border-0 rounded-3xl py-2 pl-8 md:pl-12 pr-3 shadow-sm focus:outline-none focus:border-gray-300 focus:ring-gray-300 focus:ring-1 text-sm md:text-base"
+          className="placeholder:text-gray-400 placeholder:font-semibold placeholder:text-sm block text-black bg-gray-200 w-full border-0 rounded-3xl py-1 pl-8 md:pl-12 pr-3 shadow-sm focus:outline-none focus:border-gray-300 focus:ring-gray-300 focus:ring-1 text-sm md:text-base"
           placeholder="Are you looking for something?"
           type="text"
           name="search"
