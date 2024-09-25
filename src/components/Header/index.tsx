@@ -19,7 +19,7 @@ const Header = (): JSX.Element => {
   return (
     <header className="w-full md:px-10 md:py-10 px-5 py-5 flex md:justify-between justify-around items-center">
       <div>
-        <img src="#" alt="Company logo" className="w-16 h-16 md:w-24 md:h-24" />
+        <img src="./samy-ecommerce.png" alt="Company logo" className="w-20 h-auto md:w-40 lg:w-52" />
       </div>
       <label className="w-2/3 md:w-2/4 relative block">
         <span className="sr-only">Search</span>
