@@ -33,7 +33,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ id, type, title, autho
     <div className="w-full h-auto m-0 relative flex flex-col justify-evenly items-center border-2 border-gray-300 border-solid bg-white">
       {type === 'Image' && <img src={main_attachment.big} alt={title} loading="lazy" className="w-full h-auto object-cover" />}
       <div className="w-full my-8 flex flex-col justify-center items-center">
-        <h1 className="text-3xl">{titleInUpperCase}</h1>
+        <h1 className="text-3xl text-center">{titleInUpperCase}</h1>
         <div className="flex gap-2 justify-center items-center">
           <p className="mt-2 text-2xl text-gray-300">by</p>
           <p className="mt-2 text-2xl">{authorInLowerCase}</p>
