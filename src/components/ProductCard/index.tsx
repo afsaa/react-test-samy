@@ -40,8 +40,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ id, type, title, autho
         </div>
       </div>
       {price && (
-        <div className="absolute top-0 left-0 w-36 h-28 bg-white">
-          <p className="m-4 text-xl font-semibold">{priceWithDecimals} $</p>
+        <div className="absolute top-0 left-0 w-36 h-28">
+          <div
+            className="w-0 h-0 
+  border-t-[50px] border-t-transparent
+  border-l-[75px] border-l-white
+  border-b-[50px] border-b-transparent z-10"
+          ></div>
+          <p className="absolute top-9 left-1 font-semibold z-50">{priceWithDecimals} €</p>
         </div>
       )}
       <div className="w-full border-t-2 border-t-gray-300 flex justify-evenly items-center">
